@@ -18,6 +18,10 @@ public class RectangleInfo {
 
             width = input.nextDouble();
 
+            if (width <= 0) {
+                System.out.println("Width must be greater than 0.");
+            }
+
         } while (width <= 0);
 
         do {
@@ -30,12 +34,18 @@ public class RectangleInfo {
 
             height = input.nextDouble();
 
+            if (height <= 0) {
+                System.out.println("Height must be greater than 0.");
+            }
+
         } while (height <= 0);
 
         double area = width * height;
         double perimeter = 2 * (width + height);
+        double diagonal = Math.sqrt(width * width + height * height);
 
         System.out.println("Area: " + area);
         System.out.println("Perimeter: " + perimeter);
+        System.out.println("Diagonal: " + diagonal);
     }
 }
